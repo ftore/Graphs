@@ -1,0 +1,9 @@
+# Graph Data Structure and Graph Search Algorithms
+
+Graph class holds graph related data such as number of vertices, number of edges. 
+One can add vertices and edges. Graph is undirected. It is implemented as adjasency list.
+
+In GraphSearch, two kinds of shortest path search algorithms are implemented.
+
+These classes are mainly used to solve HackeRank challenges. My HackerRank profile is
+https://www.hackerrank.com/akmal

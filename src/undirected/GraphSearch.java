@@ -11,6 +11,14 @@ import java.util.Set;
 import java.util.Stack;
 
 public class GraphSearch {
+	/**
+	 * Depth first search algorithm for searching shortest path
+	 * 
+	 * @param start
+	 * @param goal
+	 * @param G
+	 * @return
+	 */
 	public static boolean dfs(int start, int goal, Graph G) {
 		// Initialize: stack, visited HashSet and parent HashMap
 		Stack<Integer> toExplore = new Stack<>();
@@ -31,7 +39,7 @@ public class GraphSearch {
 				return true;
 			}
 			
-			// for each of curr’s neighbors, n, not in visited set
+			// for each of curr�셲 neighbors, n, not in visited set
 			List<Integer> neighbors = (List<Integer>) G.adj(curr);
 			ListIterator<Integer> it = neighbors.listIterator(neighbors.size());
 			while(it.hasPrevious()) {
@@ -40,7 +48,7 @@ public class GraphSearch {
 					// add n to visited set
 					visited.add(next);
 					
-					// add curr as n’s parent in parent map
+					// add curr as n�셲 parent in parent map
 					parent.put(next, curr);
 					
 					// push n onto the stack
@@ -52,6 +60,14 @@ public class GraphSearch {
 		return false;
 	}
 	
+	/**
+	 * Breadth first search algorithm for searching shortest path
+	 * 
+	 * @param start
+	 * @param goal
+	 * @param G
+	 * @return
+	 */
 	public static boolean bfs(int start, int goal, Graph G) {
 		// Initialize: queue, visited HashSet and parent HashMap
 		Queue<Integer> toExplore = new LinkedList<>();
@@ -72,7 +88,7 @@ public class GraphSearch {
 				return true;
 			}
 			
-			// for each of curr’s neighbors, n, not in visited set
+			// for each of curr�셲 neighbors, n, not in visited set
 			List<Integer> neighbors = (List<Integer>) G.adj(curr);
 			ListIterator<Integer> it = neighbors.listIterator(neighbors.size());
 			while(it.hasPrevious()) {
@@ -81,7 +97,7 @@ public class GraphSearch {
 					// add n to visited set
 					visited.add(next);
 					
-					// add curr as n’s parent in parent map
+					// add curr as n�셲 parent in parent map
 					parent.put(next, curr);
 					
 					// enqueue n onto the queue
