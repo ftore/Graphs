@@ -25,7 +25,7 @@ public class GraphSearch {
 		Set<Integer> visited = new HashSet<>();
 		Map<Integer, Integer> parent = new HashMap<>();
 		
-		// Push S onto the stack and add to visited
+		// Push S onto the stack and addEdge to visited
 		toExplore.push(start);
 		visited.add(start);
 		
@@ -45,10 +45,10 @@ public class GraphSearch {
 			while(it.hasPrevious()) {
 				int next = it.previous();
 				if(!visited.contains(next)) {
-					// add n to visited set
+					// addEdge n to visited set
 					visited.add(next);
 					
-					// add curr as n�셲 parent in parent map
+					// addEdge curr as n�셲 parent in parent map
 					parent.put(next, curr);
 					
 					// push n onto the stack
@@ -74,7 +74,7 @@ public class GraphSearch {
 		Set<Integer> visited = new HashSet<>();
 		Map<Integer, Integer> parent = new HashMap<>();
 		
-		// Enqueue S onto the queue and add to visited
+		// Enqueue S onto the queue and addEdge to visited
 		toExplore.add(start);
 		visited.add(start);
 		
@@ -94,10 +94,10 @@ public class GraphSearch {
 			while(it.hasPrevious()) {
 				int next = it.previous();
 				if(!visited.contains(next)) {
-					// add n to visited set
+					// addEdge n to visited set
 					visited.add(next);
 					
-					// add curr as n�셲 parent in parent map
+					// addEdge curr as n�셲 parent in parent map
 					parent.put(next, curr);
 					
 					// enqueue n onto the queue

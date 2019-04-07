@@ -27,4 +27,18 @@ public class Cycle {
     public boolean hasCycle() {
         return hasCycle;
     }
+
+    public static void main(String[] args) {
+        UndirectedGraph g = new UndirectedGraph(7);
+
+        g.addEdge(1, 2);
+        g.addEdge(1, 3);
+        g.addEdge(2, 3);
+        g.addEdge(4, 5);
+        g.addEdge(5, 6);
+        //g.addEdge(6, 4);
+
+        Cycle cycle = new Cycle(g);
+        System.out.println(cycle.hasCycle());
+    }
 }
